@@ -32,6 +32,13 @@ footer {
     header   {order: 1}
     #content {order: 2}
     nav      {order: 3}
+    nav      {margin: auto}
+}
+
+
+/* Visual appearence */
+header, footer {
+    text-align: center;
 }
 
 
@@ -39,7 +46,6 @@ body {
     background: #fff;
     color: #111;
     font: 14px Baskerville, "Palatino Linotype", "Times New Roman", Times, serif;
-    text-align: center;
 }
 
 
