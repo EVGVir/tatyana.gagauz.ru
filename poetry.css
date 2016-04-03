@@ -2,7 +2,7 @@
 body {
     display: flex;
     flex-wrap: wrap;
-    max-width: 70em;
+    max-width: 60em;
     margin: auto;
     padding-bottom: 4em;
 }
@@ -27,7 +27,7 @@ footer {
 }
 
 
-@media all and (max-width: 40em) {
+@media all and (max-width: 35em) {
     body     {flex-direction: column}
     header   {order: 1}
     #content {order: 2}
@@ -80,20 +80,19 @@ div, h1, p {
 
 .poem {
     padding: 3em 0;
-    text-align: left;
-    width: 390px;
     display: none;
+    flex-direction: column;
+    align-items: center;
 }
 
 
 .poem:target {
-    display: inherit;
+    display: flex;
 }
 
 
 h1 {
     font-weight: normal;
-    text-align: center;
     font-size: x-large;
     line-height: 1.2;
     margin-bottom: 1em;
@@ -103,6 +102,7 @@ h1 {
 p {
     line-height: 1.5;
     margin-bottom: 15px;
+    width: 100%;
 }
 
 
@@ -129,7 +129,7 @@ p {
 /* Poem creation date */
 .poem > time {
     display: block;
-    text-align: right;
+    align-self: flex-end;
     font-size: small;
     font-style: oblique;
     color: #aaa;
