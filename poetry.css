@@ -67,7 +67,7 @@ footer {
 }
 
 
-div, h1, h2, p {
+div, h1, p {
     margin: 0;
     padding: 0;
 }
@@ -87,7 +87,7 @@ div, h1, h2, p {
 }
 
 
-h1, h2 {
+h1 {
     font-weight: normal;
     text-align: center;
 }
@@ -100,31 +100,13 @@ h1 {
 }
 
 
-h2 {
-    color: #666;
-    font-size: 18px;
-    font-style: italic;
-    margin-bottom: 30px;
-}
-
-
-h2::before {
-    content: '\2014 ';
-}
-
-
-h2::after {
-    content: ' \2014';
-}
-
-
 p {
     line-height: 1.5;
     margin-bottom: 15px;
 }
 
 
-.poem h2 + p:first-letter {
+.poem h1 + p:first-letter {
     float: left;
     font-size: 38px;
     line-height: 1;
@@ -142,3 +124,15 @@ p {
     margin-bottom: 30px;
     padding-bottom: 30px;
 }
+
+
+/* Poem creation date */
+.poem > time {
+    display: block;
+    text-align: right;
+    font-size: small;
+    font-style: oblique;
+    color: #aaa;
+}
+.poem > time::before {content: '/ '}
+.poem > time::after  {content: ' /'}
