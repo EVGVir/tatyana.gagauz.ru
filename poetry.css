@@ -37,6 +37,14 @@ footer {
 }
 
 
+/* Layout for printing */
+@media print {
+    .no-print {
+        display: none;
+    }
+}
+
+
 /* Visual appearence */
 header {
     font-size: xx-large;
