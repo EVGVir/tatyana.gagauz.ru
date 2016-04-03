@@ -37,6 +37,11 @@ footer {
 
 
 /* Visual appearence */
+header {
+    font-size: xx-large;
+}
+
+
 header, footer {
     text-align: center;
 }
@@ -74,8 +79,7 @@ div, h1, p {
 
 
 .poem {
-    margin: auto;
-    padding: 20px 0;
+    padding: 3em 0;
     text-align: left;
     width: 390px;
     display: none;
@@ -94,7 +98,7 @@ h1 {
 
 
 h1 {
-    font-size: 34px;
+    font-size: x-large;
     line-height: 1.2;
     margin-bottom: 10px;
 }
