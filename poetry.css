@@ -1,8 +1,51 @@
+/* Site layout */
+body {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 70em;
+    margin: auto;
+    padding-bottom: 3em;
+}
+
+
+header {
+    flex: 1 1 100%;
+}
+
+
+#content {
+    margin: auto;
+}
+
+
+footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3em;
+}
+
+
+@media all and (max-width: 40em) {
+    body     {flex-direction: column}
+    header   {order: 1}
+    #content {order: 2}
+    nav      {order: 3}
+}
+
+
 body {
     background: #fff;
     color: #111;
     font: 14px Baskerville, "Palatino Linotype", "Times New Roman", Times, serif;
     text-align: center;
+}
+
+
+footer {
+    background: white;
+    box-shadow: 0 0 1em -0.4em black;
 }
 
 
@@ -17,6 +60,12 @@ div, h1, h2, p {
     padding: 20px 0;
     text-align: left;
     width: 390px;
+    display: none;
+}
+
+
+.poem:target {
+    display: inherit;
 }
 
 
