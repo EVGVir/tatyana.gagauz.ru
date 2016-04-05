@@ -6,9 +6,9 @@ function loadPoem() {
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4) {
             if (xmlhttp.status == 200) {
-                document.getElementById("content").innerHTML = xmlhttp.responseText;
+                document.getElementById("poem").innerHTML = xmlhttp.responseText;
             } else {
-                document.getElementById("content").innerHTML = "Oops! 404!";
+                document.getElementById("poem").innerHTML = "Oops! 404!";
             }
         }
     }

@@ -14,8 +14,11 @@ header {
 }
 
 
-#content {
+#poem {
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -31,7 +34,7 @@ footer {
 @media all and (max-width: 35em) {
     body     {flex-direction: column}
     header   {order: 1}
-    #content {order: 2}
+    #poem    {order: 2}
     nav      {order: 3}
     nav      {margin: auto}
 }
@@ -87,13 +90,6 @@ div, h1, p {
 }
 
 
-.poem {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
 h1 {
     font-weight: normal;
     font-size: x-large;
@@ -102,7 +98,7 @@ h1 {
 }
 
 
-.poem > p {
+#poem > p {
     line-height: 1.5;
     margin-bottom: 15px;
     width: 100%;
@@ -110,7 +106,7 @@ h1 {
 }
 
 
-.poem h1 + p:first-letter {
+#poem h1 + p:first-letter {
     float: left;
     font-size: 38px;
     line-height: 1;
@@ -118,25 +114,25 @@ h1 {
 }
 
 
-.poem p:first-line {
+#poem p:first-line {
     font-variant: small-caps;
     letter-spacing: 1px;
 }
 
 
-.poem p:last-child {
+#poem p:last-child {
     margin-bottom: 30px;
     padding-bottom: 30px;
 }
 
 
 /* Poem creation date */
-.poem > time {
+#poem > time {
     display: block;
     align-self: flex-end;
     font-size: small;
     font-style: oblique;
     color: #aaa;
 }
-.poem > time::before {content: '/ '}
-.poem > time::after  {content: ' /'}
+#poem > time::before {content: '/ '}
+#poem > time::after  {content: ' /'}
