@@ -88,14 +88,9 @@ div, h1, p {
 
 
 .poem {
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-
-.poem:target {
-    display: flex;
 }
 
 
