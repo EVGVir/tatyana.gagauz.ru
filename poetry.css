@@ -98,15 +98,14 @@ h1 {
 }
 
 
-#poem > p {
+#poem p {
     line-height: 1.5;
     margin-bottom: 15px;
-    width: 100%;
     white-space: nowrap;
 }
 
 
-#poem h1 + p:first-letter {
+#poem p:first-of-type:first-letter {
     float: left;
     font-size: 38px;
     line-height: 1;
@@ -117,12 +116,6 @@ h1 {
 #poem p:first-line {
     font-variant: small-caps;
     letter-spacing: 1px;
-}
-
-
-#poem p:last-child {
-    margin-bottom: 30px;
-    padding-bottom: 30px;
 }
 
 
