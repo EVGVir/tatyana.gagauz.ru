@@ -85,7 +85,7 @@ footer {
 }
 
 
-div, h1, p {
+div, h1, h2, p {
     margin: 0;
     padding: 0;
 }
@@ -101,6 +101,14 @@ h1 {
 
 h1.no-name::after {
     content: "* * *";
+}
+
+
+#poem h2 {
+    margin-bottom: 1em;
+    font: inherit;
+    font-style: italic;
+    text-align: center;
 }
 
 
