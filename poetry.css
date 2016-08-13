@@ -14,9 +14,13 @@ header {
 }
 
 
-#poem {
+#content {
     margin-left: auto;
     margin-right: auto;
+}
+
+
+#poem {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,7 +39,7 @@ footer {
 @media all and (max-width: 35em) {
     body     {flex-direction: column}
     header   {order: 1}
-    #poem    {order: 2}
+    #content {order: 2}
     nav      {order: 3}
     nav      {margin: auto}
 }
