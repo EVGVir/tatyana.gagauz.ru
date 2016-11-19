@@ -85,6 +85,12 @@ nav > ul {
 
 nav > ul > li {
     padding: 0 1em 0 1em;
+    cursor: pointer;
+}
+
+
+nav .expandable:not(.expanded) > ul {
+    display: none;
 }
 
 
