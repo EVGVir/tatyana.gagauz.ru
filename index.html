@@ -6,19 +6,19 @@
     <script type="text/javascript" src="poetry.js"></script>
     <title>Стихи Татьяны Жураковской</title>
   </head>
-  <body onload="loadContent();" onhashchange="loadContent();">
-    <header><a href="#">Стихи Татьяны Жураковской</a></header>
+  <body onload="onLoad();">
+    <header><a href="#" onclick="mainMenu_collapseAllItems();">Стихи Татьяны Жураковской</a></header>
 
     <nav id="main-menu" class="no-print">
       <ul>
-        <li class="expandable" onclick="mainMenu_expand(this);">Рубаи
-          <ul>
+        <li onclick="mainMenu_expand(this);">Рубаи
+          <ul class="expandable">
             <li><a href="#losers-life">Жизнь слабака</a></li>
             <li><a href="#about-wisdom">О мудрости</a></li>
           </ul>
         </li>
-        <li class="expandable" onclick="mainMenu_expand(this);">О жизни
-          <ul>
+        <li onclick="mainMenu_expand(this);">О жизни
+          <ul class="expandable">
             <li><a href="#road">Дорога</a></li>
             <li><a href="#in-a-hurry">В спешке</a></li>
             <li><a href="#again-a-plot-for-a-novel">И снова сюжет для романа...</a></li>
@@ -30,8 +30,8 @@
             <li><a href="#30">Тридцать</a></li>
           </ul>
         </li>
-        <li class="expandable" onclick="mainMenu_expand(this);">Детские
-          <ul>
+        <li onclick="mainMenu_expand(this);">Детские
+          <ul class="expandable">
             <li><a href="#a-clay-story">Глиняная история</a></li>
             <li><a href="#christmas-tree">Ёлка</a></li>
             <li><a href="#wheel">Это, Венька, колесо...</a></li>
@@ -45,8 +45,8 @@
             <li><a href="#bullfinches">Снегири</a></li>
           </ul>
         </li>
-        <li class="expandable" onclick="mainMenu_expand(this);">На свете есть еще Любовь...
-          <ul>
+        <li onclick="mainMenu_expand(this);">На свете есть еще Любовь...
+          <ul class="expandable">
             <li><a href="#her-eyes">Её глаза</a></li>
             <li><a href="#wait-do-not-go-moon">Подожди, не уходи, луна...</a></li>
             <li><a href="#i-love-you">Я люблю тебя!</a></li>
@@ -61,8 +61,8 @@
             <li><a href="#summer-warm-sea">Лето. Теплое море...</a></li>
           </ul>
         </li>
-        <li class="expandable" onclick="mainMenu_expand(this);">Счастье материнства
-          <ul>
+        <li onclick="mainMenu_expand(this);">Счастье материнства
+          <ul class="expandable">
             <li><a href="#dreams-settled-in-the-silence">Поселилась Дрёма в тишине...</a></li>
             <li><a href="#fingers-gently-touch-cheeks">Щек касаются нежно пальчики...</a></li>
             <li><a href="#mom-hold-my-hand">Подержи меня за ручку, мама...</a></li>
@@ -73,35 +73,35 @@
             <li><a href="#insomnia">Идет Сынок, качается...</a></li>
           </ul>
         </li>
-        <li class="expandable" onclick="mainMenu_expand(this);">Поздравления
-          <ul>
+        <li onclick="mainMenu_expand(this);">Поздравления
+          <ul class="expandable">
             <li><a href="#happy-new-year">Поздравление с новым годом!</a></li>
             <li><a href="#tatyana">Татьяна</a></li>
             <li><a href="#year-of-sheep">Новогоднее. Год Овцы</a></li>
             <li><a href="#at-23-february-evening">Вечером 23 февраля</a></li>
           </ul>
         </li>
-        <li class="expandable" onclick="mainMenu_expand(this);">Переделки песен
-          <ul>
+        <li onclick="mainMenu_expand(this);">Переделки песен
+          <ul class="expandable">
             <li><a href="#our-baby">Наш малыш</a></li>
             <li><a href="#do-you-want">Хочешь</a></li>
             <li><a href="#swing">Качаем</a></li>
             <li><a href="#i-am-a-big-hooligan">Я большой хулиган</a></li>
           </ul>
         </li>
-        <li class="expandable" onclick="mainMenu_expand(this);">Городская лирика
-          <ul>
+        <li onclick="mainMenu_expand(this);">Городская лирика
+          <ul class="expandable">
             <li><a href="#night">Ночь</a></li>
             <li><a href="#white-winter">Какая белая зима...</a></li>
           </ul>
         </li>
-        <li class="expandable" onclick="mainMenu_expand(this);">Юмор
-          <ul>
+        <li onclick="mainMenu_expand(this);">Юмор
+          <ul class="expandable">
             <li><a href="#the-elephant-method">Метод Слона</a></li>
           </ul>
         </li>
-        <li class="expandable" onclick="mainMenu_expand(this);">Стихи на заказ
-          <ul>
+        <li onclick="mainMenu_expand(this);">Стихи на заказ
+          <ul class="expandable">
             <li><a href="#ordered-happy-birthday">Поздравление с днем рождения</a></li>
           </ul>
         </li>

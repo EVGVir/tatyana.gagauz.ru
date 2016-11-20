@@ -1,3 +1,15 @@
+// Prepares the site by:
+// - loading a poem and openning the main menu if a #target is set; and
+// - installing global event listeners.
+function onLoad() {
+    loadContent();
+    mainMenu_expandCurrentTarget();
+
+    window.addEventListener("hashchange", loadContent, false);
+    window.addEventListener("resize", mainMenu_expandCurrentTarget, false);
+}
+
+
 // Loads a poem into the 'content' container.
 function loadPoem(poem) {
     var xmlhttp = new XMLHttpRequest();
@@ -32,8 +44,6 @@ function loadContent() {
         // `width` property is set to overcome a bug in the FireFox.
     }
 
-    mainMenu_expandCurrentTarget();
-
     return true;
 }
 
@@ -57,15 +67,24 @@ function mainMenu_collapseAllItems() {
     var nav = document.getElementById("main-menu");
     var items = nav.getElementsByClassName("expandable");
     for (var i = 0; i < items.length; i++) {
-        items[i].classList.remove("expanded");
+        items[i].style.height = 0;
     }
 }
 
 
 // Expands an item in the main menu and collapses all other.
 //
-// item - an element of class 'expandable' to be expanded.
+// item - a parent of an element of class 'expandable' to be expanded.
 function mainMenu_expand(item) {
     mainMenu_collapseAllItems();
-    item.classList.add("expanded");
+
+    var ul = item.children[0];
+    var listItems = ul.children;
+    var height = 0;
+
+    for (var listItemsIx = 0; listItemsIx < listItems.length; ++listItemsIx) {
+        height += listItems[listItemsIx].offsetHeight || 0;
+    }
+
+    ul.style.height = height + "px";
 }
