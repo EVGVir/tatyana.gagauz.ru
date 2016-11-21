@@ -3,10 +3,10 @@
 // - installing global event listeners.
 function onLoad() {
     loadContent();
-    mainMenu_expandCurrentTarget();
 
     window.addEventListener("hashchange", loadContent, false);
     window.addEventListener("resize", mainMenu_expandCurrentTarget, false);
+    window.addEventListener("keydown", navigate);
 }
 
 
@@ -18,7 +18,8 @@ function loadPoem(poem) {
         if (xmlhttp.readyState == 4) {
             if (xmlhttp.status == 200) {
                 document.getElementById("content").innerHTML =
-                    '<div id="poem">' + xmlhttp.responseText + '</div>';
+                    '<div id="poem">' + xmlhttp.responseText + '</div>' +
+                    generateNavigation();
             } else {
                 document.getElementById("content").innerHTML = "Oops! 404!";
             }
@@ -43,6 +44,8 @@ function loadContent() {
             '<img src="tatyana-gagauz.jpg" style="max-width:100%; width:100%"></img>';
         // `width` property is set to overcome a bug in the FireFox.
     }
+
+    mainMenu_expandCurrentTarget();
 
     return true;
 }
@@ -87,4 +90,53 @@ function mainMenu_expand(item) {
     }
 
     ul.style.height = height + "px";
+}
+
+
+// Generates navigation buttons to navigate through poems.
+function generateNavigation() {
+    var result;
+    var links = getNavigationLinks();
+
+    result = '<div id="poems-navigation" class="no-print">';
+    if (links.prev) result += '<a id="next-poem" href="' + links.prev +'">&larr;</a>';
+    result += " Ctrl "
+    if (links.next) result += '<a id="prev-poem" href="' + links.next +'">&rarr;</a>';
+    result += '</div>';
+
+    return result;
+}
+
+
+// Returns links for navigation between poems:
+// - result.prev - link to the previous poem; and
+// - result.next - link to the next poem.
+function getNavigationLinks() {
+    var result = {prev: null, next: null};
+    var nav = document.getElementById('main-menu');
+    var anchors = nav.getElementsByTagName("a");
+
+    for (var i = 0; i < anchors.length; i++) {
+        if (anchors[i].getAttribute('href') == window.location.hash) {
+            result.prev = i > 0                  ? anchors[i - 1].getAttribute('href') : null;
+            result.next = i < anchors.length - 1 ? anchors[i + 1].getAttribute('href') : null;
+            break;
+        }
+    }
+    return result;
+}
+
+
+// Navigates between poems by reacting on key down events (Ctrl + Left
+// and Ctrl + Right) and using links from the #poems-navigator
+// container.
+function navigate(event) {
+    if (event.ctrlKey) {
+        var anchor;
+        switch (event.keyCode) {
+            case 0x25: anchor = document.getElementById('next-poem'); break;
+            case 0x27: anchor = document.getElementById('prev-poem'); break;
+        }
+        if (anchor && anchor.href) document.location = anchor.href;
+    }
 }

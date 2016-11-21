@@ -23,6 +23,9 @@ nav {
     margin-left: auto;
     margin-right: auto;
     flex: 1 1 66%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -30,6 +33,11 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+
+#poems-navigation {
+    margin-top: 2em;
 }
 
 
