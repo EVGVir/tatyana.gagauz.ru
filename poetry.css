@@ -151,14 +151,6 @@ h1.no-name::after {
 }
 
 
-#poem p:first-of-type:first-letter {
-    float: left;
-    font-size: 38px;
-    line-height: 1;
-    margin: 2px 5px 0 0;
-}
-
-
 #poem p:first-line {
     font-variant: small-caps;
     letter-spacing: 1px;
