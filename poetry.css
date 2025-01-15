@@ -162,6 +162,7 @@ h1.no-name::after {
     display: block;
     align-self: flex-end;
     font-size: small;
+    text-transform: lowercase;
     font-style: oblique;
     color: #aaa;
 }
